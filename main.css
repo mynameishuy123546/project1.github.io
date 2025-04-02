@@ -1,0 +1,120 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Container chung cho các phần text */
+.text {
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+/* Màu khi bôi đen văn bản */
+::selection {
+    color: #fff; /* Trắng cho dễ đọc */
+    background-color: #e74c3c; /* Đỏ Tết */
+}
+
+/* Khoảng cách giữa các đoạn văn */
+p {
+    margin: 5px 0;
+    color: #2c3e50; /* Xanh đậm nhẹ nhàng cho chữ */
+}
+
+/* Header */
+.header {
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.3), rgba(255, 255, 255, 0.8)), 
+                url(https://kamereo.vn/blog/wp-content/uploads/2024/11/hinh-anh-tet-19.jpg) no-repeat center / cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.header h1 {
+    font-size: 50px;
+    color: #e74c3c; /* Đỏ Tết nổi bật */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Đổ bóng nhẹ để nổi trên nền */
+}
+
+.date, .tac_gia {
+    height: 30px;
+    background-color: rgba(231, 76, 60, 0.8); /* Đỏ nhạt trong suốt */
+    color: #fff; /* Trắng cho chữ */
+    position: absolute;
+    bottom: 10px;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+}
+
+.tac_gia {
+    right: 10px;
+    padding: 8px;
+}
+
+/* Các tiêu đề nội dung */
+#content1, #content2, #content3, #content4, #content5, #content7 {
+    height: 60px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #f1c40f; /* Vàng viền */
+    margin: 30px 0;
+    box-sizing: border-box;
+    background-color: #fdf2e9; /* Nền hồng nhạt nhẹ nhàng */
+    color: #c0392b; /* Đỏ đậm cho tiêu đề */
+}
+
+/* Nội dung các phần */
+.content1, .content2, .content3, .content4, .content5, .content7 {
+    padding: 20px;
+    background-color: #ffffff; /* Nền trắng */
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1); /* Bóng nhẹ */
+    margin: 10px;
+}
+
+/* Tiêu đề h3 trong nội dung */
+.content1 h3, .content2 h3, .content3 h3, .content4 h3, .content5 h3, .content7 h3 {
+    color: #27ae60; /* Xanh lá đậm - biểu tượng mùa xuân */
+    margin-bottom: 10px;
+}
+
+/* Hình ảnh */
+.content-image {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    margin: 15px 0;
+    border-radius: 5px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border: 2px solid #f1c40f; /* Viền vàng cho hình ảnh */
+}
+
+/* Footer */
+#footer {
+    height: 60px;
+    width: 100%;
+    background-color: #e74c3c; /* Đỏ Tết */
+    color: #fff; /* Chữ trắng */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+}
+
+/* Hover effect cho tiêu đề nội dung */
+#content1:hover, #content2:hover, #content3:hover, #content4:hover, #content5:hover, #content7:hover {
+    background-color: #f1c40f; /* Vàng sáng khi hover */
+    color: #fff; /* Chữ trắng khi hover */
+    transition: all 0.3s ease; /* Hiệu ứng mượt */
+}
