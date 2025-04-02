@@ -111,6 +111,7 @@ p {
     display: flex;
     align-items: center;
     justify-content: center;
+    text-align: center; /* Căn giữa trên điện thoại */
     font-size: 16px;
     border: 2px solid #f1c40f;
     margin: 30px 0;
