@@ -12,14 +12,14 @@
 
 /* Màu khi bôi đen văn bản */
 ::selection {
-    color: #fff; /* Trắng cho dễ đọc */
-    background-color: #e74c3c; /* Đỏ Tết */
+    color: #fff;
+    background-color: #e74c3c;
 }
 
 /* Khoảng cách giữa các đoạn văn */
 p {
     margin: 5px 0;
-    color: #2c3e50; /* Xanh đậm nhẹ nhàng cho chữ */
+    color: #2c3e50;
 }
 
 /* Header */
@@ -29,6 +29,7 @@ p {
     background: linear-gradient(180deg, rgba(0, 0, 0, 0.3), rgba(255, 255, 255, 0.8)), 
                 url(https://kamereo.vn/blog/wp-content/uploads/2024/11/hinh-anh-tet-19.jpg) no-repeat center / cover;
     display: flex;
+    flex-direction: column; /* Chuyển sang cột trên điện thoại */
     align-items: center;
     justify-content: center;
     position: relative;
@@ -36,14 +37,15 @@ p {
 
 .header h1 {
     font-size: 50px;
-    color: #e74c3c; /* Đỏ Tết nổi bật */
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Đổ bóng nhẹ để nổi trên nền */
+    color: #e74c3c;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    text-align: center; /* Căn giữa trên mọi thiết bị */
 }
 
 .date, .tac_gia {
     height: 30px;
-    background-color: rgba(231, 76, 60, 0.8); /* Đỏ nhạt trong suốt */
-    color: #fff; /* Trắng cho chữ */
+    background-color: rgba(231, 76, 60, 0.8);
+    color: #fff;
     position: absolute;
     bottom: 10px;
     padding: 5px;
@@ -65,56 +67,114 @@ p {
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 2px solid #f1c40f; /* Vàng viền */
+    border: 2px solid #f1c40f;
     margin: 30px 0;
     box-sizing: border-box;
-    background-color: #fdf2e9; /* Nền hồng nhạt nhẹ nhàng */
-    color: #c0392b; /* Đỏ đậm cho tiêu đề */
+    background-color: #fdf2e9;
+    color: #c0392b;
 }
 
 /* Nội dung các phần */
 .content1, .content2, .content3, .content4, .content5, .content7 {
     padding: 20px;
-    background-color: #ffffff; /* Nền trắng */
+    background-color: #ffffff;
     border-radius: 10px;
-    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1); /* Bóng nhẹ */
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
     margin: 10px;
 }
 
 /* Tiêu đề h3 trong nội dung */
 .content1 h3, .content2 h3, .content3 h3, .content4 h3, .content5 h3, .content7 h3 {
-    color: #27ae60; /* Xanh lá đậm - biểu tượng mùa xuân */
+    color: #27ae60;
     margin-bottom: 10px;
 }
 
 /* Hình ảnh */
 .content-image {
-    width: 100%;
-    max-width: 400px;
+    width: 100%; /* Chiếm toàn bộ chiều rộng container */
+    max-width: 400px; /* Giới hạn tối đa */
     height: auto;
     margin: 15px 0;
     border-radius: 5px;
     display: block;
     margin-left: auto;
     margin-right: auto;
-    border: 2px solid #f1c40f; /* Viền vàng cho hình ảnh */
+    border: 2px solid #f1c40f;
 }
 
 /* Footer */
 #footer {
     height: 60px;
     width: 100%;
-    background-color: #e74c3c; /* Đỏ Tết */
-    color: #fff; /* Chữ trắng */
+    background-color: #e74c3c;
+    color: #fff;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 16px;
+    text-align: center; /* Căn giữa trên điện thoại */
 }
 
 /* Hover effect cho tiêu đề nội dung */
 #content1:hover, #content2:hover, #content3:hover, #content4:hover, #content5:hover, #content7:hover {
-    background-color: #f1c40f; /* Vàng sáng khi hover */
-    color: #fff; /* Chữ trắng khi hover */
-    transition: all 0.3s ease; /* Hiệu ứng mượt */
+    background-color: #f1c40f;
+    color: #fff;
+    transition: all 0.3s ease;
+}
+
+/* Media Queries cho điện thoại (dưới 768px) */
+@media only screen and (max-width: 768px) {
+    /* Header */
+    .header h1 {
+        font-size: 30px; /* Giảm kích thước chữ trên điện thoại */
+    }
+
+    .date, .tac_gia {
+        position: static; /* Bỏ absolute để không chồng lấn */
+        margin: 5px 0;
+        width: 90%; /* Chiếm gần hết chiều rộng */
+        text-align: center;
+    }
+
+    /* Tiêu đề nội dung */
+    #content1, #content2, #content3, #content4, #content5, #content7 {
+        height: auto; /* Chiều cao tự động */
+        padding: 10px;
+        margin: 15px 0;
+    }
+
+    #content1 h1, #content2 h1, #content3 h1, #content4 h1, #content5 h1, #content7 h1 {
+        font-size: 24px; /* Giảm kích thước chữ */
+    }
+
+    /* Nội dung */
+    .content1, .content2, .content3, .content4, .content5, .content7 {
+        padding: 15px;
+        margin: 5px;
+    }
+
+    .content1 h3, .content2 h3, .content3 h3, .content4 h3, .content5 h3, .content7 h3 {
+        font-size: 18px; /* Giảm kích thước chữ */
+    }
+
+    p {
+        font-size: 14px; /* Giảm kích thước chữ cho đoạn văn */
+    }
+
+    /* Hình ảnh */
+    .content-image {
+        max-width: 100%; /* Đảm bảo không vượt quá màn hình */
+    }
+
+    /* Footer */
+    #footer {
+        font-size: 14px;
+        padding: 10px;
+        height: auto;
+    }
+
+    /* Audio */
+    audio {
+        width: 100%; /* Đảm bảo audio vừa với màn hình */
+    }
 }
