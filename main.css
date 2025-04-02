@@ -62,7 +62,7 @@ p {
 
 /* Các tiêu đề nội dung */
 #content1, #content2, #content3, #content4, #content5, #content7 {
-    height: 70px;
+    height: 60px;
     width: 100%;
     display: flex;
     align-items: center;
@@ -116,6 +116,7 @@ p {
     margin: 30px 0;
     box-sizing: border-box;
 }
+
 /* Hover effect cho tiêu đề nội dung */
 #content1:hover, #content2:hover, #content3:hover, #content4:hover, #content5:hover, #content7:hover {
     background-color: #f1c40f;
